@@ -15,7 +15,7 @@ public class TestData {
     public String firstName = faker.name().firstName();
     public String lastName = faker.name().lastName();
     public String cellPhone = "1234567890";
-    public String emailAddress = faker.internet().emailAddress();
+    public String emailAddress = faker.name().firstName() + "." + faker.name().lastName() + "@mailforyou.com";
     public String gender = genderList[random.nextInt(genderList.length-1)];
     public String[] dateOfBirth = ("30 April 2001").split(" ");
     public String[] subjects = {"Maths", "Chemistry"};
