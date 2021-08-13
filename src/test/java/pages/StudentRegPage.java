@@ -79,9 +79,6 @@ public class StudentRegPage {
 
         $("#example-modal-sizes-title-lg").shouldHave(Condition.text(CONF_FORM_TITLE));
         ElementsCollection lines = $$(".table-responsive tbody tr").snapshot();
-
-
-
         for (SelenideElement line: lines) {
 
             String key = line.$("td").text();
@@ -91,9 +88,7 @@ public class StudentRegPage {
                     .as("line" + key + " has value " + value + " should have be " + expValue)
                     .isEqualTo(expValue);
         }
-
         softAssertions.assertAll();
-
     }
 
 
